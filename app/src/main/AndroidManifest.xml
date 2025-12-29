@@ -17,6 +17,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FirstApp">
         <activity
+            android:name=".PacientData"
+            android:exported="false" />
+        <activity
+            android:name=".Bmi"
+            android:exported="false" />
+        <activity
+            android:name=".ImageZoom"
+            android:exported="false" />
+        <activity
+            android:name=".FontStyle"
+            android:exported="false" />
+        <activity
+            android:name=".Crudoperation"
+            android:exported="false" />
+        <activity
+            android:name=".Timepicer"
+            android:exported="false" />
+        <activity
+            android:name=".Zoom_in_font"
+            android:exported="false" />
+        <activity
+            android:name=".zoomfont"
+            android:exported="false" />
+        <activity
             android:name=".measurecon"
             android:exported="false" />
         <activity

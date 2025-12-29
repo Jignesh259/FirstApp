@@ -12,14 +12,13 @@ import java.net.InetSocketAddress;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnShowName,btnMathOperation,btnCuboid,btnsimplein,btnfindarea,btndisplayimage,btnLogin,btnRegi,btnLoginRegi,btnsocial,btnAlert,btncurrency,btnmeasure;
+    Button btnShowName,btnMathOperation,btnCuboid,btnsimplein,btnfindarea,btndisplayimage,btnLogin,btnRegi,btnLoginRegi,btnsocial,btnAlert,btncurrency,btnmeasure,btnzoomtext,btnTimepicker,btncrud,btneditfont,btnimagezomm,btnbmi,btnpacient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-
         btnShowName = findViewById(R.id.btnShowName);
         btnMathOperation = findViewById(R.id.btnMathOperation);
         btnCuboid=findViewById(R.id.btnCuboidArea);
@@ -33,6 +32,13 @@ public class MainActivity extends AppCompatActivity {
         btnAlert=findViewById(R.id.btnAlertBox);
         btncurrency=findViewById(R.id.btnCurrencyCov);
         btnmeasure=findViewById(R.id.btnMeasure);
+        btnTimepicker=findViewById(R.id.btnTimePicker);
+        btnzoomtext=findViewById(R.id.btnZoom_in_out);
+        btneditfont=findViewById(R.id.btnFontStyle);
+        btnimagezomm=findViewById(R.id.btnImageZoom);
+        btnbmi=findViewById(R.id.btnBmi);
+        btncrud=findViewById(R.id.btnCrud);
+        btnpacient=findViewById(R.id.btnPatient);
         btnShowName.setOnClickListener(a -> {
             Intent intent1 = new Intent(MainActivity.this, MainActivity2.class);
             startActivity(intent1);
@@ -84,6 +90,34 @@ public class MainActivity extends AppCompatActivity {
         btnmeasure.setOnClickListener(m->{
             Intent intent13=new Intent(getApplicationContext(), measurecon.class);
             startActivity(intent13);
+        });
+        btnzoomtext.setOnClickListener(n->{
+            Intent intent14=new Intent(getApplicationContext(), Zoom_in_font.class);
+            startActivity(intent14);
+        });
+        btnTimepicker.setOnClickListener(o->{
+            Intent intent15=new Intent(getApplicationContext(), Timepicer.class);
+            startActivity(intent15);
+        });
+        btncrud.setOnClickListener(p->{
+            Intent intent16=new Intent(getApplicationContext(),Crudoperation.class);
+            startActivity(intent16);
+        });
+        btneditfont.setOnClickListener(q->{
+            Intent intent17=new Intent(getApplicationContext(),FontStyle.class);
+            startActivity(intent17);
+        });
+        btnbmi.setOnClickListener(r->{
+            Intent intent18=new Intent(getApplicationContext(),Bmi.class);
+            startActivity(intent18);
+        });
+        btnpacient.setOnClickListener(s->{
+            Intent intent19=new Intent(getApplicationContext(), PacientData.class);
+            startActivity(intent19);
+        });
+        btnimagezomm.setOnClickListener(x->{
+            Intent intent20=new Intent(getApplicationContext(), ImageZoom.class);
+            startActivity(intent20);
         });
     }
 }

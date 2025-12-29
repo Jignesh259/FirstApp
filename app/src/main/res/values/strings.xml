@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">FirstApp</string>
+    <string-array name="font_sizes">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+        <item>Extra Large</item>
+    </string-array>
 </resources>
