@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Currency">
+
+    <!-- HEADER -->
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Measure Converter"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:padding="18dp"
+        android:background="#2563EB"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- CHECKBOXES -->
+    <LinearLayout
+        android:id="@+id/checkLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tvHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <CheckBox
+            android:id="@+id/cbM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Meter"/>
+
+        <CheckBox
+            android:id="@+id/cbCM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CentiMeter"/>
+
+        <CheckBox
+            android:id="@+id/cbInch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inch"/>
+
+    </LinearLayout>
+
+    <!-- INPUT -->
+    <EditText
+        android:id="@+id/etKm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Values In KM"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toBottomOf="@id/checkLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- RESULT -->
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Converted Measure"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/etKm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- FOOTER -->
+    <TextView
+        android:id="@+id/tvFooter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Android Practical Example"
+        android:textSize="12sp"
+        android:textColor="#475569"
+        android:gravity="center"
+        android:padding="12dp"
+        android:background="#E2E8F0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

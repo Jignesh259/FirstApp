@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity6">
+
+    <!-- ================= HEADER ================= -->
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="5th Practical Question"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="#2563EB"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- ================= RADIO GROUP ================= -->
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tvHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RadioButton
+            android:id="@+id/rbCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Circle" />
+
+        <RadioButton
+            android:id="@+id/rbTriangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Triangle" />
+
+        <RadioButton
+            android:id="@+id/rbRectangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rectangle" />
+        <RadioButton
+            android:id="@+id/rbCube"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cube" />
+
+    </RadioGroup>
+
+    <!-- ================= CIRCLE ================= -->
+    <LinearLayout
+        android:id="@+id/layoutCircle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:id="@+id/etRadius"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Radius"
+            android:inputType="numberDecimal"/>
+
+        <Button
+            android:id="@+id/btnCircle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Area"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+
+    <!-- ================= TRIANGLE ================= -->
+    <LinearLayout
+        android:id="@+id/layoutTriangle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:id="@+id/etBase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Base"
+            android:inputType="numberDecimal"/>
+
+        <EditText
+            android:id="@+id/etHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Height"
+            android:inputType="numberDecimal"/>
+
+        <Button
+            android:id="@+id/btnTriangle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Area"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+
+    <!-- ================= RECTANGLE ================= -->
+    <LinearLayout
+        android:id="@+id/layoutRectangle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:id="@+id/etLength"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Length"
+            android:inputType="numberDecimal"/>
+
+        <EditText
+            android:id="@+id/etWidth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Width"
+            android:inputType="numberDecimal"/>
+
+        <Button
+            android:id="@+id/btnRectangle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Area"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+
+    <!-- ================= CUBE ================= -->
+    <LinearLayout
+        android:id="@+id/layoutCube"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:id="@+id/etSide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Side"
+            android:inputType="numberDecimal"/>
+
+        <Button
+            android:id="@+id/btnCube"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Volume"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+
+    <!-- ================= GO BACK ================= -->
+    <Button
+        android:id="@+id/btnGoBack"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="Go Back"
+        app:layout_constraintBottom_toTopOf="@id/tvFooter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <!-- ================= FOOTER ================= -->
+    <TextView
+        android:id="@+id/tvFooter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="All Activities Are Shown Here"
+        android:textSize="12sp"
+        android:textColor="#555"
+        android:gravity="center"
+        android:padding="10dp"
+        android:background="#E5E7EB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

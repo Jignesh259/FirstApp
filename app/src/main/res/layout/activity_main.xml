@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFC">
+
+    <!-- ================= HEADER ================= -->
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Android Practical Menu"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:padding="18dp"
+        android:background="#2563EB"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <!-- ================= CONTENT ================= -->
+    <ScrollView
+        android:id="@+id/scrollMenu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tvHeader"
+        app:layout_constraintBottom_toTopOf="@id/tvFooter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <Button
+                android:id="@+id/btnShowName"
+                style="@style/MenuButtonModern"
+                android:text="Show Name"/>
+
+            <Button
+                android:id="@+id/btnMathOperation"
+                style="@style/MenuButtonModern"
+                android:text="Math Operation"/>
+
+            <Button
+                android:id="@+id/btnCuboidArea"
+                style="@style/MenuButtonModern"
+                android:text="Find Area of Cuboid"/>
+
+            <Button
+                android:id="@+id/btnSimpleInterest"
+                style="@style/MenuButtonModern"
+                android:text="Find Simple Interest"/>
+
+            <Button
+                android:id="@+id/btnAreaInput"
+                style="@style/MenuButtonModern"
+                android:text="Find Area (User Input)"/>
+
+            <Button
+                android:id="@+id/btnDisplayImage"
+                style="@style/MenuButtonModern"
+                android:text="Display Image"/>
+
+            <Button
+                android:id="@+id/btnLogin"
+                style="@style/MenuButtonModern"
+                android:text="Login Page"/>
+
+            <Button
+                android:id="@+id/btnRegister"
+                style="@style/MenuButtonModern"
+                android:text="Registration Page"/>
+
+            <Button
+                android:id="@+id/btnLoginRegister"
+                style="@style/MenuButtonModern"
+                android:text="Login And Registration Page"/>
+
+            <Button
+                android:id="@+id/btnSocialRegister"
+                style="@style/MenuButtonModern"
+                android:text="Social Account Registration"/>
+
+            <Button
+                android:id="@+id/btnAlertBox"
+                style="@style/MenuButtonModern"
+                android:text="Alert Dialog Box"/>
+            <Button
+                android:id="@+id/btnCurrencyCov"
+                style="@style/MenuButtonModern"
+                android:text="Currency Convertor"/>
+            <Button
+                android:id="@+id/btnMeasure"
+                style="@style/MenuButtonModern"
+                android:text="Measure Convertor"/>
+            <Button
+                android:id="@+id/btnZoom_in_out"
+                style="@style/MenuButtonModern"
+                android:text="Zoom IN OUT"/>
+            <Button
+                android:id="@+id/btnTimePicker"
+                style="@style/MenuButtonModern"
+                android:text="Date And Time Picker"/>
+            <Button
+                android:id="@+id/btnCrud"
+                style="@style/MenuButtonModern"
+                android:text="CRUD Operation in ListView"/>
+            <Button
+                android:id="@+id/btnFontStyle"
+                style="@style/MenuButtonModern"
+                android:text="Apply Diff Font Style"/>
+            <Button
+                android:id="@+id/btnImageZoom"
+                style="@style/MenuButtonModern"
+                android:text="Image Zoom IN OUT"/>
+            <Button
+                android:id="@+id/btnBmi"
+                style="@style/MenuButtonModern"
+                android:text="BMI Calculator"/>
+            <Button
+                android:id="@+id/btnPatient"
+                style="@style/MenuButtonModern"
+                android:text="Doctor Appointment"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ================= FOOTER ================= -->
+    <TextView
+        android:id="@+id/tvFooter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="All activities are listed here"
+        android:textSize="12sp"
+        android:textColor="#475569"
+        android:gravity="center"
+        android:padding="12dp"
+        android:background="#E2E8F0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
